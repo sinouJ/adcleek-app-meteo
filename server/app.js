@@ -7,6 +7,15 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+const db = require('./database');
+
+const cors = require('cors');
+app.use(cors({
+  credentials: true
+}));
+
+db.init();
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
