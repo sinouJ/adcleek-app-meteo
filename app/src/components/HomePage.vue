@@ -2,9 +2,9 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <div class="meteo_container">
-      
+      <city-table :cities="cities"></city-table>
+      <!-- forecasts here -->
     </div>
-    <city-table :cities="cities"></city-table>
   </div>
 </template>
 
